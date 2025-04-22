@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R's Cookie Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>R's Cookie Store</h1>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="cookie-grid">
+            <div class="cookie-card">
+                <img src="Chocolate Chip Cookie.jpg" alt="Chocolate Chip Cookie">
+                <h3>Chocolate Chip Cookie</h3>
+                <p>Classic chocolate chip cookies made with premium chocolate</p>
+                <p class="price">₹100.00</p>
+                <button onclick="addToCart('Chocolate Chip Cookie', 100.00)">Add to Cart</button>
+            </div>
+
+            <div class="cookie-card">
+                <img src="Oatmeal Raisin Cookie.jpg" alt="Oatmeal Raisin">
+                <h3>Oatmeal Raisin</h3>
+                <p>Healthy and delicious oatmeal cookies with raisins</p>
+                <p class="price">₹200.00</p>
+                <button onclick="addToCart('Oatmeal Raisin', 200.00)">Add to Cart</button>
+            </div>
+
+            <div class="cookie-card">
+                <img src="Double Chocolate Cookie.jpg" alt="Double Chocolate">
+                <h3>Double Chocolate</h3>
+                <p>Rich double chocolate cookies for chocolate lovers</p>
+                <p class="price">₹300.00</p>
+                <button onclick="addToCart('Double Chocolate', 300.00)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">Total: ₹0.00</div>
+            <button id="checkout-btn" onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 R's Cookie Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

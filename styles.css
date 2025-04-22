@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;  /* AliceBlue */
+}
+
+header {
+    background-color: #b0e0e6;  /* PowderBlue */
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #2c5777;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.cookie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cookie-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cookie-card:hover {
+    transform: translateY(-5px);
+}
+
+.cookie-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.cookie-card h3 {
+    color: #2c5777;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    color: #2c5777;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+button {
+    background-color: #87ceeb;  /* SkyBlue */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4682b4;  /* SteelBlue */
+}
+
+.cart-section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cart-section h2 {
+    color: #2c5777;
+    margin-bottom: 1rem;
+}
+
+#cart-items {
+    margin-bottom: 1rem;
+}
+
+#cart-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #2c5777;
+}
+
+footer {
+    background-color: #b0e0e6;
+    color: #2c5777;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} 
