@@ -3,7 +3,7 @@
 > A responsive, interactive front-end e-commerce storefront built with Vanilla JavaScript, HTML5, and CSS3. 
 
 ## 🌐 Live Demo
-[View Live Site Here](https://abdur-rahman10.github.io/cookie-store/) *(Note: Update this link if your deployment URL changes)*
+[View Live Site Here](https://abdur-rahman10.github.io/cookie-store/) 
 
 ## 📖 About The Project
 This project is a lightweight, dynamic web application that simulates an online bakery. It demonstrates core front-end development skills, including DOM manipulation, state management (shopping cart logic), and modern CSS layout techniques, all without the use of external frameworks or libraries.
