@@ -5,6 +5,8 @@
 ## 🌐 Live Demo
 [View Live Site Here](https://r-cookie-store.onrender.com/)
 
+> ⚠️ **Note on Performance:** This application is deployed using Render's free tier. If the server has been inactive, the initial page load may take 30–60 seconds to spin up. Thank you for your patience!
+
 ## 📖 About The Project
 This project simulates a modern online bakery. Originally starting as a static front-end page, it has been completely architected into a full-stack application. It demonstrates strict separation of concerns, application state management via `localStorage`, and real-world backend business logic to prevent front-end manipulation.
 
