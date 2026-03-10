@@ -1,45 +1,53 @@
 # 🍪 R's Cookie Store
 
-> A responsive, interactive front-end e-commerce storefront built with Vanilla JavaScript, HTML5, and CSS3. 
+> A responsive, full-stack e-commerce storefront built with Node.js, Express, EJS, and Vanilla JavaScript.
 
 ## 🌐 Live Demo
-[View Live Site Here](https://abdur-rahman10.github.io/cookie-store/) 
+[View Live Site Here](https://r-cookie-store.onrender.com/)
 
 ## 📖 About The Project
-This project is a lightweight, dynamic web application that simulates an online bakery. It demonstrates core front-end development skills, including DOM manipulation, state management (shopping cart logic), and modern CSS layout techniques, all without the use of external frameworks or libraries.
+This project simulates a modern online bakery. Originally starting as a static front-end page, it has been completely architected into a full-stack application. It demonstrates strict separation of concerns, application state management via `localStorage`, and real-world backend business logic to prevent front-end manipulation.
 
 ### ✨ Key Features
-* **Dynamic Shopping Cart:** Users can add items, view cart counts, and remove items. The total price calculates and updates dynamically in real-time.
-* **Interactive UI/UX:** Features custom CSS animations, hover effects, and a floating JavaScript notification system that alerts users when an item is added to the cart.
-* **Responsive Grid Layout:** Utilizes CSS Grid (`auto-fit`, `minmax`) to ensure the product display seamlessly adapts to any screen size, from mobile phones to desktop monitors.
-* **Thematic Styling:** Employs a cohesive, custom color palette (AliceBlue, PowderBlue, SteelBlue) to create a clean and inviting user interface.
+* **🔒 Secure Server-Side Checkout:** The front-end never dictates the final price. Cart data is sent to the Express backend via a `fetch` POST request, where the server cross-references a secure database to recalculate subtotals, apply discounts, and issue a verified receipt.
+* **📍 Geofenced Delivery Logic:** Features a dynamic delivery engine based on user PIN codes. Calculates local Bengaluru city delivery (PINs 560001-560111), out-of-station delivery, and automatically waives fees for orders over ₹500.
+* **🎟️ Dynamic Discount Engine:** Evaluates percentage-based (`WELCOME10`) and flat-rate (`SWEET50`) coupons. Includes "ineligibility traps" that automatically revoke applied coupons if a user removes items and drops below the required minimum spend.
+* **📱 Modern UI/UX:** Built with a fully responsive CSS Grid, featuring an off-canvas slide-out cart, temporary toast notifications, a dismissible promo banner (managed via `sessionStorage`), and a warm, color-theory-driven bakery theme.
+* **🧠 State Management:** Utilizes browser `localStorage` to ensure the shopping cart persists across page reloads and browser sessions.
 
 ## 🛠️ Technologies Used
-* **HTML5** (Semantic structure)
-* **CSS3** (Flexbox, Grid, Animations, Custom Styling)
-* **JavaScript (ES6+)** (Cart logic, DOM manipulation, Event handling)
+* **Backend:** Node.js, Express.js
+* **Templating:** EJS (Embedded JavaScript)
+* **Frontend:** HTML5, CSS3 (Flexbox/Grid, Animations)
+* **Logic:** Vanilla JavaScript (ES6 Modules, Event Delegation, Async/Await Fetch API)
 
 ## 📂 Project Structure
-* `index.html` - The main structure of the storefront and cart interface.
-* `styles.css` - Custom stylesheet handling responsive layouts and animations.
-* `script.js` - The JavaScript engine managing the `cart` array, total calculations, and visual DOM updates.
-* `*.jpg` - High-quality image assets for the product cards.
+* `server.js` - The Express application and secure `/checkout` API route.
+* `data/cookies.js` - The backend ES module acting as the product database.
+* `views/index.ejs` - The dynamic HTML template powered by EJS loops.
+* `public/` - Static assets directory containing `script.js`, `styles.css`, and product images.
 
 ## 🚀 How to Run Locally
 To view and interact with this project on your local machine:
+
 1. Clone this repository:
    ```bash
-   git clone (https://github.com/Abdur-Rahman10/cookie-store.git)
+   git clone [https://github.com/Abdur-Rahman10/cookie-store.git](https://github.com/Abdur-Rahman10/cookie-store.git)
 Navigate to the project directory:
 
-```Bash
-cd cookie-store
-```
-Open index.html in your preferred web browser. No server setup is required!
+Bash```
+cd cookie-store```
 
-👨‍💻 Author
-AbduR Rahman
+Install the required Node.js dependencies:
+Bash```
+npm install```
 
-GitHub: @Abdur-Rahman10
+Start the Express server:
+Bash```
+node server.js```
 
-Email: abdurrahman.2003.1030@gmail.com
+Open your web browser and visit http://localhost:3000.
+
+👨‍💻 Author: AbduR Rahman
+🌐 GitHub: @Abdur-Rahman10
+📧 Email: abdurrahman.2003.1030@gmail.com
