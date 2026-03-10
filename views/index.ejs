@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R's Cookie Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="promo-banner" id="promo-banner">
+        <p>🎉 Welcome! Use code <strong>WELCOME10</strong> for 10% off, or <strong>SWEET50</strong> for ₹50 off orders over ₹300!</p>
+        <button id="close-promo">&times;</button>
+    </div>
+    <header>
+        <div class="logo-area">
+            <h1>R's Cookie Store</h1>
+        </div>
+        <div class="cart-icon" id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="cookie-grid">
+            <% cookies.forEach(cookie => { %>
+                <div class="cookie-card">
+                    <img src="<%= cookie.image %>" alt="<%= cookie.name %>">
+                    <h3><%= cookie.name %></h3>
+                    <p><%= cookie.description %></p>
+                    <p class="price">₹<%= cookie.price.toFixed(2) %></p>
+                    <button class="add-to-cart-btn" data-name="<%= cookie.name %>" data-price="<%= cookie.price %>">
+                        Add to Cart
+                    </button>
+                </div>
+            <% }) %>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="side-cart" id="side-cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <div class="cart-header-actions">
+                <button id="clear-cart-link" class="clear-cart-btn">Clear All</button>
+                <button id="close-cart" class="close-cart">&times;</button>
+            </div>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items">
+            </div>
+        
+        <div class="cart-footer">
+            <div class="coupon-section">
+                <input type="text" id="coupon-code" placeholder="Enter promo code">
+                <button id="apply-coupon">Apply</button>
+            </div>
+            <p id="coupon-message" class="coupon-message"></p>
+
+            <div class="coupon-section">
+                <input type="text" id="pincode-input" placeholder="Enter 6-digit PIN">
+                <button id="apply-pincode">Set PIN</button>
+            </div>
+            <p id="pincode-message" class="coupon-message"></p>
+            
+            <div class="price-breakdown">
+                <div class="breakdown-line"><span>Subtotal:</span> <span id="subtotal">₹0.00</span></div>
+                <div class="breakdown-line discount-line"><span>Discount:</span> <span id="discount-amount">-₹0.00</span></div>
+                <div class="breakdown-line"><span>Delivery:</span> <span id="delivery-fee">₹0.00</span></div>
+                <div class="breakdown-line total-line"><span>Total:</span> <span id="final-total">₹0.00</span></div>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 R's Cookie Store. Baked with love in Bengaluru.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

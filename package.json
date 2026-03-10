@@ -1,0 +1,25 @@
+{
+  "name": "cookie-store",
+  "version": "1.0.0",
+  "description": "> A responsive, interactive front-end e-commerce storefront built with Vanilla JavaScript, HTML5, and CSS3.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdur-Rahman10/cookie-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Abdur-Rahman10/cookie-store/issues"
+  },
+  "homepage": "https://github.com/Abdur-Rahman10/cookie-store#readme",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}
