@@ -230,7 +230,6 @@ button:active {
     transform: scale(1.1);
 }
 
-/* Container for the close and clear buttons */
 .cart-header-actions {
     display: flex;
     align-items: center;
@@ -363,8 +362,11 @@ button:active {
 
 .toast-notification {
     position: fixed;
-    top: 90px;
-    right: 20px;
+    top: auto; 
+    bottom: 90px; 
+    right: 50%; 
+    transform: translateX(50%); 
+    width: max-content; 
     background-color: var(--dark-chocolate);
     color: var(--white);
     font-weight: 600;
@@ -372,18 +374,18 @@ button:active {
     border-radius: 30px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1000;
-    border-left: 5px solid var(--caramel);
-    animation: slideInRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 0.5s 2.5s forwards;
+    border-bottom: 4px solid var(--caramel); 
+    animation: slideUpBottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 0.5s 2.5s forwards;
 }
 
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(100px); }
-    to { opacity: 1; transform: translateX(0); }
+@keyframes slideUpBottom {
+    from { opacity: 0; transform: translate(50%, 50px); }
+    to { opacity: 1; transform: translate(50%, 0); }
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; visibility: hidden; }
+    from { opacity: 1; transform: translate(50%, 0); }
+    to { opacity: 0; transform: translate(50%, -20px); visibility: hidden; }
 }
 
 .promo-banner {
@@ -436,18 +438,4 @@ button:active {
         font-size: 1.2rem;
         padding: 0.5rem 0.8rem;
     }
-    
-    .toast-notification {
-        top: auto;
-        bottom: 90px;
-        right: 50%;
-        transform: translateX(50%);
-        width: max-content;
-        animation: slideUpBottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOut 0.5s 2.5s forwards;
-    }
-}
-
-@keyframes slideUpBottom {
-    from { opacity: 0; transform: translate(50%, 50px); }
-    to { opacity: 1; transform: translate(50%, 0); }
 }
